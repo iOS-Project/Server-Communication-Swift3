@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.0.1)
+  - Kingfisher (3.1.4)
+  - SwiftSpinner (1.0.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - Kingfisher (~> 3.0)
+  - SwiftSpinner
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Kingfisher: 6c67e3e57f2d81a9cfdfa25052cd86f33ceac9bb
+  SwiftSpinner: 1c80ff6ea1c47e2faa1dfce0fcd5e6b39a47fd51
+
+PODFILE CHECKSUM: 83645ee695290e8f41b5d10fb838dd59bf926071
+
+COCOAPODS: 1.1.1
