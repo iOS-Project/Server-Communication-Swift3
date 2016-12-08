@@ -8,4 +8,6 @@
 - URLSessionDataTask
 - URLCatch
 
-Sample Download and Upload with ProgressVie.
+Sample Download and Upload with ProgressView.
+
+Credit<b>Sovathana<b>
