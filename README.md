@@ -6,5 +6,5 @@
 - URLSessionDownloadTask
 - URLSessionUploadTask
 - URLSessionDataTask
-
+- URLCatch
 Sample Download and Upload with progress bar.
