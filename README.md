@@ -6,7 +6,7 @@
 - URLSessionDownloadTask
 - URLSessionUploadTask
 - URLSessionDataTask
-- URLCatch
+- URLCache
 
 Sample Download and Upload with ProgressView.
 
