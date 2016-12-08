@@ -31,16 +31,12 @@ class DownloadViewController: UIViewController {
     }
     
     @IBAction func downloadFile(_ sender: Any) {
-//        if let cache = getCatch(url: "http://cdn.wallpapersafari.com/6/36/XxOeFh.jpg"){
-//            let image = cache as? UIImage
-//            self.image.image = image
-//            return
-//        }
         
-        checkCache()
+        let urlString = "http://cdn.wallpapersafari.com/6/36/XxOeFh.jpg"
         
-        if let url = URL(string: "http://cdn.wallpapersafari.com/6/36/XxOeFh.jpg"){
-            
+        checkCache(urlString: urlString)
+        
+        if let url = URL(string: urlString){
             downloadTask = session.downloadTask(with: url)
             downloadTask.resume()
         }
@@ -61,11 +57,11 @@ class DownloadViewController: UIViewController {
         return urlCache
     }
     
-    func checkCache(){
+    func checkCache(urlString: String){
         
         print("Download Started...")
         
-        let url = URL(string: "http://cdn.wallpapersafari.com/6/36/XxOeFh.jpg")
+        let url = URL(string: urlString)
         //Create request with caching policy
         let request = URLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad
             , timeoutInterval: 60)
