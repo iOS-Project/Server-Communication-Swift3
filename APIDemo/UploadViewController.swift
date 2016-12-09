@@ -56,14 +56,14 @@ class UploadViewController: UIViewController {
         
         let imageData = UIImagePNGRepresentation(image.image!)
         let mimeType = "image/png" // Multipurpose Internet Mail Extension
-        formData.append("--\(boundary)\r\n".data(using: .utf8)!)
-        formData.append("Content-Disposition: form-data; name=\"FILE\"; filename=\"Image.png\"\r\n\r\n".data(using: .utf8)!)
+        formData.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+        formData.append("Content-Disposition: form-data; name=\"FILE\"; filename=\"Image.png\"\r\n".data(using: .utf8)!)
         formData.append("Content-Type: \(mimeType)\r\n\r\n".data(using: .utf8)!)
         formData.append(imageData!)
         formData.append("\r\n".data(using: .utf8)!)
         formData.append("--\(boundary)--\r\n".data(using: .utf8)!)
         
-        //request.httpBody = formData
+        request.httpBody = formData
         
         print(formData)
         
@@ -89,10 +89,6 @@ class UploadViewController: UIViewController {
             }else{
                 print(error?.localizedDescription)
             }
-            
-//            DispatchQueue.main.async {
-//                SwiftSpinner.hide()
-//            }
             
         })
         
@@ -126,8 +122,8 @@ class UploadViewController: UIViewController {
         //            }
         //
         //        })
-        
-        //task.resume()
+        //
+        //        task.resume()
         
     }
 }
